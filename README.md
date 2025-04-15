@@ -5,7 +5,7 @@
 ## Clonar el repositorio y agregarle un nombre nuevo del nuevo proyecto
 
 ```bash
-git clone https://github.com/MUTUAL-DE-SERVICIOS-AL-POLICIA/template-microservice.git nombre-frontend
+git clone https://github.com/MUTUAL-DE-SERVICIOS-AL-POLICIA/template-next.git nombre-frontend
 ```
 
 ## Inicializar proyecto
@@ -27,7 +27,7 @@ pnpm install
 pnpm dev
 
 # Para enlazar a un nuevo repositorio
-git remote add origin https://github.com/tu-usuario/{nombre_nuevo-microservice}.git
+git remote add origin https://github.com/tu-usuario/{nombre_nuevo-next}.git
 git add .
 git commit -m "Inicialización del nuevo proyecto"
 git branch -M main
