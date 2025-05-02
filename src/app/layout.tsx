@@ -7,16 +7,18 @@ import { Providers } from "./providers";
 import { fontSans } from "@/utils/fonts";
 import { Navbar } from "@/components/header/navbar";
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: siteConfig.name,
-//     template: `%s - ${siteConfig.name}`,
-//   },
-//   description: siteConfig.description,
-//   icons: {
-//     icon: "/favicon.ico",
-//   },
-// };
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: {
+    default: "Nombre del sitio",
+    template: `%s - nombre del sitio`,
+  },
+  description: "Descripción del sitio",
+  icons: {
+    icon: "/icono_muserpol.svg",
+  },
+};
+
 
 export const viewport: Viewport = {
   themeColor: [
