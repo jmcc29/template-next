@@ -1,5 +1,6 @@
 "use server";
 import { cookies } from "next/headers";
+
 import { ResponseData } from "../interfaces";
 const getCookie = async (name: string) => {
   const cookie = await cookies();
@@ -30,4 +31,3 @@ export async function getUserCookie(): Promise<ResponseData> {
     };
   }
 }
-

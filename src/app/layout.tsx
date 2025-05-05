@@ -1,13 +1,13 @@
 import "@/utils/styles/globals.css";
 import { Viewport } from "next";
 import clsx from "clsx";
+import { Metadata } from "next";
 
 import { Providers } from "./providers";
 
 import { fontSans } from "@/utils/fonts";
 import { Navbar } from "@/components/header/navbar";
 
-import { Metadata } from "next";
 export const metadata: Metadata = {
   title: {
     default: "Nombre del sitio",
@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     icon: "/icono_muserpol.svg",
   },
 };
-
 
 export const viewport: Viewport = {
   themeColor: [
