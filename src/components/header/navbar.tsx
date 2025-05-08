@@ -5,15 +5,16 @@ import {
   Navbar as NextUINavbar,
 } from "@heroui/navbar";
 import NextLink from "next/link";
+import { Suspense } from "react";
 
 import { Logo } from "@/components/common/icons";
 import { ThemeSwitch } from "@/components/common/theme-switch";
 import UserComponent from "@/components/header/user";
 import { urlLogin } from "@/utils/services";
-import { Suspense } from "react";
 import { getUserCookie } from "@/utils/helpers/cookie";
 export const Navbar = async () => {
   const { data } = await getUserCookie();
+
   return (
     <Suspense
       fallback={
