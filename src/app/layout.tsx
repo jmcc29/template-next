@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 
 import { fontSans } from "@/utils/fonts";
 import { Navbar } from "@/components/header/navbar";
+import { getDeployEnvironment } from "@/utils/envs";
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +38,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -46,17 +47,13 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            {/* <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
-              </Link>
-            </footer> */}
+            {getDeployEnvironment() === "dev" && (
+              <footer className="fixed bottom-0 left-0 w-full bg-red-600 text-white text-center py-2 text-sm z-50">
+                <span className="uppercase text-sm font-semibold">
+                  Versión de pruebas
+                </span>
+              </footer>
+            )}
           </div>
         </Providers>
       </body>
